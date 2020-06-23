@@ -22,6 +22,8 @@ const jsLoader = () => {
   if (isDev) {
     loaders.push('eslint-loader')
   }
+
+  return loaders
 }
 
 module.exports = {
@@ -79,7 +81,7 @@ module.exports = {
       },
       { test: /\.js$/,
         exclude: /node_modules/,
-        use: JSON.loaders()
+        use: jsLoader()
         
       }
     ]
